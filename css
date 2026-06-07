@@ -1,0 +1,291 @@
+/* ===================== FONTES (sempre no topo!) ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ===================== BASE ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    color: #f5e6c8;
+
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ===================== MENU ===================== */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navegacao {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background-color: rgba(20, 12, 8, 0.55);
+    backdrop-filter: blur(8px);
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 170, 80, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: #ffcf8a;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+}
+
+.navegacao a:hover {
+    color: #ff9d4d;
+}
+
+/* botao modo escuro */
+.btn-dark {
+    background: none;
+    border: 1px solid rgba(255, 170, 80, 0.5);
+    color: #ffcf8a;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-dark:hover {
+    background-color: rgba(255, 170, 80, 0.15);
+}
+
+/* ===================== CARTAO PRINCIPAL ===================== */
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.cartao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+
+    max-width: 900px;
+    background-color: rgba(25, 15, 10, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 170, 80, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.foto {
+    width: 100%;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 180, 90, 0.4);
+    box-shadow: 0 0 25px rgba(255, 140, 50, 0.3);
+    display: block;
+}
+
+.texto h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 18px;
+    color: #ffb95e;
+}
+
+.texto p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #f0dcc0;
+}
+
+/* ===================== SOBRE MIM ===================== */
+.sobre {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    background-color: rgba(25, 15, 10, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 170, 80, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.sobre h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #ffb95e;
+    margin-bottom: 20px;
+}
+
+.sobre h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #ffcf8a;
+    margin: 30px 0 14px 0;
+}
+
+.sobre p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #f0dcc0;
+}
+
+.skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+}
+
+.skills li {
+    background-color: rgba(255, 170, 80, 0.15);
+    border: 1px solid rgba(255, 170, 80, 0.4);
+    color: #ffcf8a;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 1.05rem;
+}
+
+/* ===================== CONTATO ===================== */
+.contato {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    background-color: rgba(25, 15, 10, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 170, 80, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.contato h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #ffb95e;
+    margin-bottom: 16px;
+}
+
+.contato p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #f0dcc0;
+    margin-bottom: 10px;
+}
+
+/* formulario em grid */
+.contato form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 170, 80, 0.4);
+    background-color: rgba(255, 245, 230, 0.9);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #3a2a1a;
+}
+
+/* mensagem e botao ocupam a linha toda */
+.contato textarea,
+.contato button {
+    grid-column: 1 / -1;
+}
+
+.contato button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffb95e;
+    color: #3a2a1a;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #ff9d4d;
+}
+
+.links p {
+    font-size: 1.1rem;
+    color: #ffcf8a;
+    margin-bottom: 6px;
+    word-break: break-all; /* link gigante nao estoura a caixa */
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 768px) {
+    .cartao {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .navegacao {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .contato form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cartao,
+.sobre,
+.contato {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cartao.visivel,
+.sobre.visivel,
+.contato.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ===================== BOTAO EMAIL ===================== */
+.botao-email {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 14px 28px;
+    border-radius: 10px;
+    background-color: #ffb95e;
+    color: #3a2a1a;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.botao-email:hover {
+    background-color: #ff9d4d;
+}
